@@ -94,7 +94,7 @@ class User extends Authenticatable
     {
         $exist=$this->is_favoring($micropostId);
         if ($exist) {
-            $this->favorites()->detach($userId);
+            $this->favorites()->detach($micropostId);
             return true;
         } else {
             return false;
